@@ -1,0 +1,165 @@
+  
+ <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anjali Balaji Tilve - Portfolio</title>
+
+  <!-- Tailwind CSS + AOS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background: linear-gradient(-45deg,
+        #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb,
+        #fbc2eb, #a6c1ee, #fddb92, #d1fdff,
+        #fccb90, #e0c3fc
+      );
+      background-size: 500% 500%;
+      animation: gradientShift 20s ease infinite;
+      transition: color 0.5s ease;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 100% 50%; }
+      50% { background-position: 0% 100%; }
+      75% { background-position: 100% 0%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .floating-bg { animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);} }
+
+    nav { backdrop-filter: blur(12px); }
+
+    h1 { font-size: clamp(2rem, 6vw, 4rem); }
+    h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
+    p { font-size: clamp(1rem, 2vw, 1.15rem); }
+
+    @media (max-width: 640px) { .container { padding-left: 1rem; padding-right: 1rem; } }
+  </style>
+</head>
+<body class="transition-colors duration-700" id="dynamic-body">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-white/40 dark:bg-gray-900/70 shadow-md z-50 transition">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-lg sm:text-xl font-bold">Anjali Balaji Tilve</h1>
+      <button id="menu-toggle" class="md:hidden focus:outline-none text-3xl">☰</button>
+      <ul id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-6 text-center md:text-left bg-white/70 md:bg-transparent rounded-lg md:rounded-none p-4 md:p-0 mt-2 md:mt-0">
+        <li><a href="#landing" class="hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-600 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-600 transition">Projects</a></li>
+        <li><a href="#certifications" class="hover:text-blue-600 transition">Certifications</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Landing -->
+  <section id="landing" class="h-screen flex flex-col items-center justify-center text-center px-6 sm:px-8 pt-20">
+    <div class="floating-bg absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://via.placeholder.com/1920x1080?text=Creative+Pattern');"></div>
+    <div class="z-10" data-aos="fade-up">
+      <h1 class="font-extrabold mb-4 leading-tight">Anjali Balaji Tilve</h1>
+      <p class="text-lg sm:text-2xl mb-6">Born to Learn. Built to Lead.</p>
+      <a href="#about" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition text-sm sm:text-base">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 px-6 sm:px-10 text-center" data-aos="fade-up">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="font-bold mb-6">About Me</h2>
+      <p class="text-base sm:text-lg leading-relaxed">
+        Hi! I’m <b>Anjali Balaji Tilve</b> from <b>Nanded, Maharashtra</b>. I’m passionate about 
+        <b>data science</b> and <b>software development</b>, with a goal to work at top tech companies 
+        as a <b>Data Scientist</b> and <b>Software Developer</b>.<br><br>
+        I currently work as a <b>freelancer in data science on Fiverr</b>, helping clients turn data into meaningful insights. 
+        In my free time, I enjoy <b>writing diaries</b> and <b>reading books</b>, which keep me creative and inspired.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 px-6 sm:px-10" data-aos="fade-up">
+    <div class="container mx-auto max-w-5xl text-center">
+      <h2 class="font-bold mb-8">Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="p-4 bg-white/70 backdrop-blur rounded-lg shadow hover:shadow-lg transition"><h3 class="font-semibold">Python</h3></div>
+        <div class="p-4 bg-white/70 backdrop-blur rounded-lg shadow hover:shadow-lg transition"><h3 class="font-semibold">C / C++</h3></div>
+        <div class="p-4 bg-white/70 backdrop-blur rounded-lg shadow hover:shadow-lg transition"><h3 class="font-semibold">Data Cleaning</h3></div>
+        <div class="p-4 bg-white/70 backdrop-blur rounded-lg shadow hover:shadow-lg transition"><h3 class="font-semibold">Data Visualization</h3></div>
+        <div class="p-4 bg-white/70 backdrop-blur rounded-lg shadow hover:shadow-lg transition"><h3 class="font-semibold">MS Excel</h3></div>
+        <div class="p-4 bg-white/70 backdrop-blur rounded-lg shadow hover:shadow-lg transition"><h3 class="font-semibold">Problem Solving</h3></div>
+        <div class="p-4 bg-white/70 backdrop-blur rounded-lg shadow hover:shadow-lg transition"><h3 class="font-semibold">Communication</h3></div>
+        <div class="p-4 bg-white/70 backdrop-blur rounded-lg shadow hover:shadow-lg transition"><h3 class="font-semibold">Data Analysis</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-6 sm:px-10 text-center relative" data-aos="fade-up">
+    <div class="container mx-auto max-w-3xl relative border-4 border-transparent rounded-2xl p-6 sm:p-10 bg-white/40 backdrop-blur-md shadow-lg">
+      <div class="absolute inset-0 rounded-2xl border-4 border-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 blur-[2px] -z-10"></div>
+      <h2 class="font-bold mb-8 text-3xl sm:text-4xl">Contact</h2>
+      <p class="mb-6 text-base sm:text-lg">Let’s connect! Reach out via email or LinkedIn.</p>
+      <div class="flex flex-wrap justify-center gap-4 text-lg font-medium">
+        <a href="https://www.linkedin.com/in/anjali-balaji-tilve-6359662ba" target="_blank" class="hover:text-pink-500 transition">LinkedIn</a>
+      </div>
+      <div class="mt-6">
+        <a href="mailto:tilvebalaji011@gmail.com"
+           class="inline-block mt-4 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:opacity-90 transition">
+          Email Me
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 bg-white/30 backdrop-blur-lg mt-10 text-sm sm:text-base">
+    <p>&copy; 2025 Anjali Balaji Tilve. All rights reserved.</p>
+  </footer>
+
+  <!-- Fixed JS -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (typeof AOS !== "undefined") AOS.init();
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) target.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    function updateTextColor() {
+      const bg = window.getComputedStyle(document.body).backgroundImage;
+      if (!bg || bg === "none") return;
+      const hexColors = bg.match(/#[0-9a-fA-F]{6}/g);
+      if (!hexColors) return;
+      const hex = hexColors[Math.floor(Math.random() * hexColors.length)];
+      const r = parseInt(hex.substr(1,2),16);
+      const g = parseInt(hex.substr(3,2),16);
+      const b = parseInt(hex.substr(5,2),16);
+      const brightness = (r*299 + g*587 + b*114)/1000;
+      document.body.style.color = brightness>150?"#111":"#fff";
+    }
+    setInterval(updateTextColor,3000);
+
+    const toggleBtn = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  });
+  </script>
+</body>
+</html>
