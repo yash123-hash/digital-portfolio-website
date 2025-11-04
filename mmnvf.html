@@ -1,7 +1,8 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anjali Balaji Tilve - Portfolio</title>
 
@@ -102,20 +103,6 @@
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-16 px-6 sm:px-10 text-center" data-aos="fade-up">
-    <div class="container mx-auto max-w-6xl">
-      <h2 class="font-bold mb-8">Projects</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white/70 backdrop-blur rounded-lg shadow hover:scale-105 transition-transform p-6">
-          <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
-          <p class="mb-4">Responsive personal portfolio website built using HTML, Tailwind CSS, and JavaScript.</p>
-          <a href="mmnvf.html" class="text-blue-600 hover:underline">View Demo</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Contact -->
   <section id="contact" class="py-16 px-6 sm:px-10 text-center relative" data-aos="fade-up">
     <div class="container mx-auto max-w-3xl relative border-4 border-transparent rounded-2xl p-6 sm:p-10 bg-white/40 backdrop-blur-md shadow-lg">
@@ -139,8 +126,9 @@
     <p>&copy; 2025 Anjali Balaji Tilve. All rights reserved.</p>
   </footer>
 
-  <!-- JS -->
+  <!-- Fixed JS -->
   <script>
+  document.addEventListener("DOMContentLoaded", function () {
     if (typeof AOS !== "undefined") AOS.init();
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -153,6 +141,7 @@
 
     function updateTextColor() {
       const bg = window.getComputedStyle(document.body).backgroundImage;
+      if (!bg || bg === "none") return;
       const hexColors = bg.match(/#[0-9a-fA-F]{6}/g);
       if (!hexColors) return;
       const hex = hexColors[Math.floor(Math.random() * hexColors.length)];
@@ -164,13 +153,12 @@
     }
     setInterval(updateTextColor,3000);
 
-    // Navbar toggle for mobile
     const toggleBtn = document.getElementById("menu-toggle");
     const menu = document.getElementById("menu");
     toggleBtn.addEventListener("click", () => {
       menu.classList.toggle("hidden");
     });
+  });
   </script>
 </body>
 </html>
- 
